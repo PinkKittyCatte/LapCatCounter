@@ -1,9 +1,9 @@
 {
-    "Author":  "Tangy",
+    "Author":  "PinkKitty",
     "Name":  "Lap Cat Counter",
     "Punchline":  "Counts both sides of every shared lap :3",
-    "Description":  "Tracks the laps you sit in, the LapCats who sit in yours, time spent together, streaks, personal stats, and 50 local achievements.",
+    "Description":  "Tracks the laps you sit in, the LapCats who sit in yours, time spent together, streaks, personal stats, and 60 local achievements.",
     "InternalName":  "LapCatCounter",
-    "AssemblyVersion":  "1.1.1.0",
+    "AssemblyVersion":  "1.1.1.1",
     "ApplicableVersion":  "any"
 }

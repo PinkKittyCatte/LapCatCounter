@@ -99,6 +99,27 @@ public static class AchievementCatalog
             AchievementStatistic.TimeISatInTheirLapsSeconds, IsDuration: true),
         new("hosted_time_5h", "Make Yourself at Home", "Host LapCats for 5 hours.", 5 * 60 * 60,
             AchievementStatistic.TimeTheySatInMyLapSeconds, IsDuration: true),
+
+        new("long_term_resident", "Long-Term Resident", "Earn credit for 2,500 lap sessions.", 2_500,
+            AchievementStatistic.AchievementSessionCredits),
+        new("day_and_night", "Day and Night", "Keep one lap session going for 24 hours.", 24 * 60 * 60,
+            AchievementStatistic.LongestSessionSeconds, IsDuration: true),
+        new("full_time_furniture", "Full-Time Furniture", "Spend 2,000 hours sharing laps.", 2_000 * 60 * 60,
+            AchievementStatistic.TotalLapTimeSeconds, IsDuration: true),
+        new("neighborhood_institution", "Neighborhood Institution", "Welcome 5,000 credited LapCat visits.", 5_000,
+            AchievementStatistic.CreditedVisits),
+        new("local_legend", "Local Legend", "Meet 500 different LapCats.", 500,
+            AchievementStatistic.UniqueLapCats),
+        new("always_a_regular", "Always a Regular", "See the same LapCat on 200 different days.", 200,
+            CustomEvaluator: MostCreditedDaysForOneCharacter),
+        new("year_round_seating", "Year-Round Seating", "Share a lap on 365 days in a row.", 365,
+            AchievementStatistic.LongestStreak),
+        new("permanent_fixture", "Permanent Fixture", "Share a lap on 1,000 different days.", 1_000,
+            AchievementStatistic.DaysWithLapCats),
+        new("two_way_street", "Two-Way Street", "Sit in other laps 1,000 times.", 1_000,
+            AchievementStatistic.AchievementSessionsISatInTheirLaps),
+        new("favorite_seat", "Favorite Seat", "Host LapCats 1,000 times.", 1_000,
+            AchievementStatistic.AchievementSessionsTheySatInMyLap),
     };
 
     private static long MostCreditedDaysForOneCharacter(LapCatStatistics statistics)
@@ -145,4 +166,5 @@ public static class AchievementCatalog
                 maximum = character.AchievementSessionsTheySatInMyLap;
         return maximum;
     }
+
 }
